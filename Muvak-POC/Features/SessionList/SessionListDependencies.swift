@@ -20,7 +20,7 @@ struct SessionListService {
 extension SessionListService {
     static let live = SessionListService(
         fetchSessions: {
-            Just([Session.mockRelaxSession, Session.mockFocusSession])
+            Just([Session.mockRelaxSession, Session.mockFocusSession, Session.mockCalmingSession])
                 .setFailureType(to: Error.self)
                 .delay(for: .milliseconds(500), scheduler: DispatchQueue.main)
                 .eraseToAnyPublisher()
@@ -29,7 +29,7 @@ extension SessionListService {
 
     static let mock = SessionListService(
         fetchSessions: {
-            Just([Session.mockRelaxSession, Session.mockFocusSession])
+            Just([Session.mockRelaxSession, Session.mockFocusSession, Session.mockCalmingSession])
                 .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
         }

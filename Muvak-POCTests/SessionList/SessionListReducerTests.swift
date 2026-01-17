@@ -120,7 +120,7 @@ final class SessionListStoreTests: XCTestCase {
 
         await fulfillment(of: [expectation], timeout: 2.0)
 
-        XCTAssertEqual(store.state.sessions.count, 2)
+        XCTAssertEqual(store.state.sessions.count, 3)
         XCTAssertFalse(store.state.isLoading)
         XCTAssertNil(store.state.errorMessage)
     }

@@ -102,6 +102,17 @@ extension Session {
         imageURL: nil,
         description: "Enhance your concentration and mental clarity."
     )
+
+    static let mockCalmingSession = Session(
+        id: "session-003",
+        title: "Calming Session",
+        type: .sleep,
+        tags: ["Calm", "Gentle", "Evening"],
+        rating: 4.9,
+        totalDuration: 1200,
+        imageURL: nil,
+        description: "A gentle session to quiet your mind and prepare for restful sleep."
+    )
 }
 
 extension SessionPerformance {
